@@ -1,0 +1,22 @@
+Service Information
+service: notes-api
+stage: prod
+region: us-east-1
+stack: notes-api-prod
+resources: 32
+api keys:
+  None
+endpoints:
+  POST - https://rrkeiuc595.execute-api.us-east-1.amazonaws.com/prod/notes
+  GET - https://rrkeiuc595.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+  GET - https://rrkeiuc595.execute-api.us-east-1.amazonaws.com/prod/notes
+  PUT - https://rrkeiuc595.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+  DELETE - https://rrkeiuc595.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+functions:
+  create: notes-api-prod-create
+  get: notes-api-prod-get
+  list: notes-api-prod-list
+  update: notes-api-prod-update
+  delete: notes-api-prod-delete
+layers:
+  None
