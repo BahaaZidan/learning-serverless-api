@@ -4,7 +4,7 @@ service: notes-api
 stage: prod
 region: us-east-1
 stack: notes-api-prod
-resources: 38
+resources: 43
 api keys:
   None
 endpoints:
@@ -23,7 +23,6 @@ functions:
   billing: notes-api-prod-billing
 layers:
   None
-
 
 =============
 
