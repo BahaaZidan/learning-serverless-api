@@ -1,9 +1,10 @@
+Serverless: Stack update finished...
 Service Information
 service: notes-api
 stage: prod
 region: us-east-1
 stack: notes-api-prod
-resources: 32
+resources: 38
 api keys:
   None
 endpoints:
@@ -12,15 +13,16 @@ endpoints:
   GET - https://rrkeiuc595.execute-api.us-east-1.amazonaws.com/prod/notes
   PUT - https://rrkeiuc595.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
   DELETE - https://rrkeiuc595.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+  POST - https://rrkeiuc595.execute-api.us-east-1.amazonaws.com/prod/billing
 functions:
   create: notes-api-prod-create
   get: notes-api-prod-get
   list: notes-api-prod-list
   update: notes-api-prod-update
   delete: notes-api-prod-delete
+  billing: notes-api-prod-billing
 layers:
   None
-
 
 
 =============
@@ -44,3 +46,10 @@ npx aws-api-gateway-cli-test \
 --path-template='/notes' \
 --method='POST' \
 --body='{"content":"hello worldddd","attachment":"hello.jpg"}'
+
+==============
+Stripe :
+Publishable key = pk_test_51IUYXCEhXDAHv3jqFjZg36p5qFt2vxyYV9S9sceCAhu7ZOWCIm9IZ3HzeVi3I7hZFqPYDgdP5lyAoATWaJadEUgb00NeRHu9QU
+Secret key = sk_test_51IUYXCEhXDAHv3jqZ7iSYC4n2pVJ4MI9fyO2TW9jJeRpt4YIYczimipGHSnJZcpi1F4l6VkAwu80q35rLLc1nDnd00OWMi4xQN
+
+
