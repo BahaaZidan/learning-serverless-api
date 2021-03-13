@@ -1,0 +1,5 @@
+aws cognito-idp sign-up  --region us-east-2  --client-id 57e6lgd8ujjmfdjbvnop203naf  --username burnerr64@gmail.com --password Passw0rd!
+
+aws cognito-idp admin-confirm-sign-up --region us-east-2 --user-pool-id us-east-2_aUTz5eDqK --username burnerr64@gmail.com
+
+serverless invoke local --function create --path mocks/create-event.json

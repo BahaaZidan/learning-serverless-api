@@ -20,3 +20,27 @@ functions:
   delete: notes-api-prod-delete
 layers:
   None
+
+
+
+=============
+
+YOUR_COGNITO_USER_POOL_ID=us-east-2_aUTz5eDqK
+YOUR_COGNITO_APP_CLIENT_ID=57e6lgd8ujjmfdjbvnop203naf
+YOUR_COGNITO_REGION=us-east-2
+YOUR_IDENTITY_POOL_ID=us-east-2:93f85ea4-7a3a-44b3-9a77-97e42d50c44f
+YOUR_API_GATEWAY_URL=https://rrkeiuc595.execute-api.us-east-1.amazonaws.com/prod
+YOUR_API_GATEWAY_REGION=us-east-1
+
+npx aws-api-gateway-cli-test \
+--username='burnerr64@gmail.com' \
+--password='Passw0rd!' \
+--user-pool-id='us-east-2_aUTz5eDqK' \
+--app-client-id='57e6lgd8ujjmfdjbvnop203naf' \
+--cognito-region='us-east-2' \
+--identity-pool-id='us-east-2:93f85ea4-7a3a-44b3-9a77-97e42d50c44f' \
+--invoke-url='https://rrkeiuc595.execute-api.us-east-1.amazonaws.com/prod' \
+--api-gateway-region='us-east-1' \
+--path-template='/notes' \
+--method='POST' \
+--body='{"content":"hello worldddd","attachment":"hello.jpg"}'
